@@ -9,9 +9,9 @@
 
 @section('content')
     <table>
-        <tr><th>Dress</th></tr>
+        <tr><th>Dress</th><th>Image</th></tr>
         @foreach ($items as $item)
-            <tr><td>{{$item->getData()}}</td></tr>
+            <tr><td>{{$item->getData()}}</td><td><img src="/storage/dresses/{{ $item->image }}" alt=""></td></tr>
         @endforeach
     </table>
 @endsection

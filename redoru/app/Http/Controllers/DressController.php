@@ -22,7 +22,7 @@ class DressController extends Controller
     public function create(Request $request)
     {
 
-        $filename = $request->image->store('public/dresses');
+        $filename = basename($request->image->store('public/dresses'));
 
         $param = [
             'id'  => $request->id,
