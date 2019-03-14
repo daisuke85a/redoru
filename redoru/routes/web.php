@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('dress' , 'DressController@index' );
+Route::get('dress/add' , 'DressController@add' );
+Route::post('dress/add' , 'DressController@create');
